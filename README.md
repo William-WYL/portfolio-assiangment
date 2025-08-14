@@ -1,60 +1,61 @@
-## UI Garden - React Component Library Deployment Guide
+# Portfolio Site - Deployment Guide
 
-This guide explains how to run the UI Garden React Component Library from Docker Hub using Docker.
+This guide explains how to build and run your portfolio site using Docker.
 
-#### 🛠 Prerequisites
+## 🛠 Prerequisites
 
 1. **Docker installed on your machine**
-2. **Internet access to pull the Docker image**
+2. **Node.js installed (for local build, optional)**
 
-#### 🚀 Run the App from Docker Hub
+## 🚀 Build and Run the Portfolio Site with Docker
 
-1. **Pull the image from Docker Hub**
+### 1. Build the Docker Image
 
-```bash
-docker pull williamwyl/wang_wei_coding_assignment13:latest
-```
-
-2. **Run the container**
-
-This command runs the container and maps it to localhost:8083:
+Open a terminal in the project root and run:
 
 ```bash
-docker run -d -p 8018:80 --name wang_wei_coding_assignment13 williamwyl/wang_wei_coding_assignment13:latest
+docker build -t lastName_firstName_coding_assignment14 .
 ```
 
-3. **Open the App in Browser**
+### 2. Run the Docker Container
+
+This command runs the container and maps it to localhost:5575:
+
+```bash
+docker run -d -p 5575:5575 --name lastName_firstName_coding_assignment14 lastName_firstName_coding_assignment14
+```
+
+### 3. Open the Portfolio Site in Your Browser
 
 Go to:
 
-http://127.0.0.1:8018
+http://127.0.0.1:5575
 
-You should see the production build of the UI Garden React component library.
+You should see your portfolio site running.
 
-#### 🛑 Stopping the Container (Optional)
+## 🛑 Stopping and Removing the Container
 
 To stop the running container:
 
 ```bash
-docker stop wang_wei_coding_assignment13
+docker stop lastName_firstName_coding_assignment14
 ```
 
 To remove it:
 
 ```bash
-docker rm wang_wei_coding_assignment13
+docker rm lastName_firstName_coding_assignment14
 ```
 
-#### 📦 About This App
+## 📦 About This Portfolio Site
 
-This is a component library built with:
+- Built with React + TypeScript
+- Uses your custom component library
+- Dockerized for easy deployment
+- CI/CD pipeline with GitHub Actions for code quality and automated builds
 
-    Built with React + TypeScript
+## 📁 Container Details
 
-    Storybook integration for component previews
-
-    Styled-components for styling
-
-    Husky pre-commit hooks to ensure code quality with Prettier, ESLint, and tests before commits
-
-    GitHub Actions configured for CI/CD to run the same quality checks on every push
+- Container name: `lastName_firstName_coding_assignment14`
+- Working directory in container: `/lastName_firstName_final_site`
+- Site runs at: `localhost:5575`
