@@ -9,12 +9,12 @@ This guide explains how to build and run your portfolio site using Docker.
 
 ## 🚀 Build and Run the Portfolio Site with Docker
 
-### 1. Build the Docker Image
+### 1. Pull the Pre-Built Docker Image
 
 Open a terminal in the project root and run:
 
 ```bash
-docker build -t wang_wei_coding_assignment14 .
+docker pull williamwyl/portfolio-assignment:latest
 ```
 
 ### 2. Run the Docker Container
@@ -22,7 +22,7 @@ docker build -t wang_wei_coding_assignment14 .
 This command runs the container and maps it to localhost:5575:
 
 ```bash
-docker run -d -p 5575:5575 --name wang_wei_coding_assignment14 wang_wei_coding_assignment14
+docker run -d -p 5575:80 --name wang_wei_coding_assignment14 williamwyl/portfolio-assignment:latest
 ```
 
 ### 3. Open the Portfolio Site in Your Browser
