@@ -14,7 +14,7 @@ This guide explains how to build and run your portfolio site using Docker.
 Open a terminal in the project root and run:
 
 ```bash
-docker build -t lastName_firstName_coding_assignment14 .
+docker build -t wang_wei_coding_assignment14 .
 ```
 
 ### 2. Run the Docker Container
@@ -22,7 +22,7 @@ docker build -t lastName_firstName_coding_assignment14 .
 This command runs the container and maps it to localhost:5575:
 
 ```bash
-docker run -d -p 5575:5575 --name lastName_firstName_coding_assignment14 lastName_firstName_coding_assignment14
+docker run -d -p 5575:5575 --name wang_wei_coding_assignment14 wang_wei_coding_assignment14
 ```
 
 ### 3. Open the Portfolio Site in Your Browser
@@ -38,13 +38,13 @@ You should see your portfolio site running.
 To stop the running container:
 
 ```bash
-docker stop lastName_firstName_coding_assignment14
+docker stop wang_wei_coding_assignment14
 ```
 
 To remove it:
 
 ```bash
-docker rm lastName_firstName_coding_assignment14
+docker rm wang_wei_coding_assignment14
 ```
 
 ## 📦 About This Portfolio Site
@@ -56,6 +56,6 @@ docker rm lastName_firstName_coding_assignment14
 
 ## 📁 Container Details
 
-- Container name: `lastName_firstName_coding_assignment14`
-- Working directory in container: `/lastName_firstName_final_site`
+- Container name: `wang_wei_coding_assignment14`
+- Working directory in container: `/wang_wei_final_site`
 - Site runs at: `localhost:5575`
